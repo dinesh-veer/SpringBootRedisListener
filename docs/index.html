@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spring Boot Redis Listener</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        SpringBootRedisListener
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="redis-listener.html">Redis Listener</a>
+        <a href="configuration.html">Configuration</a>
+        <a href="docker.html">Docker</a>
+        <a href="examples.html">Examples</a>
+    </nav>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h3>Spring Boot Redis Listener</h3>
+
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#technology">Technology Stack</a>
+        <a href="#flow">Message Flow</a>
+        <a href="#structure">Project Structure</a>
+        <a href="#repository">Repository</a>
+    </aside>
+
+    <main class="content">
+
+        <section class="hero">
+            <h1>Spring Boot Redis Listener</h1>
+
+            <p>
+                A practical Spring Boot application demonstrating how to
+                publish and listen for messages using Redis Pub/Sub.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary"
+                   href="getting-started.html">
+                    Get Started
+                </a>
+
+                <a class="button"
+                   href="https://github.com/dinesh-veer/SpringBootRedisListener"
+                   target="_blank">
+                    GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <section id="overview">
+            <h2>Overview</h2>
+
+            <p>
+                <strong>SpringBootRedisListener</strong> is a Spring Boot
+                example project that demonstrates Redis message publishing
+                and asynchronous message listening.
+            </p>
+
+            <p>
+                Redis Pub/Sub allows one component to publish a message to
+                a Redis channel while one or more subscribers listen to
+                that channel.
+            </p>
+        </section>
+
+        <section id="features">
+
+            <h2>Features</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Redis Pub/Sub</h3>
+                    <p>
+                        Publish messages to Redis channels and consume
+                        messages asynchronously.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Spring Boot</h3>
+                    <p>
+                        Uses Spring Boot to configure the application and
+                        Redis integration.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Redis Listener</h3>
+                    <p>
+                        Demonstrates Redis message listener configuration
+                        using Spring Data Redis.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Docker Compose</h3>
+                    <p>
+                        Redis can be started easily using Docker Compose.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="technology">
+
+            <h2>Technology Stack</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Technology</th>
+                    <th>Purpose</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Java 21</td>
+                    <td>Application development</td>
+                </tr>
+
+                <tr>
+                    <td>Spring Boot</td>
+                    <td>Application framework</td>
+                </tr>
+
+                <tr>
+                    <td>Spring Data Redis</td>
+                    <td>Redis integration</td>
+                </tr>
+
+                <tr>
+                    <td>Redis</td>
+                    <td>Message broker / Pub/Sub</td>
+                </tr>
+
+                <tr>
+                    <td>Docker Compose</td>
+                    <td>Redis container management</td>
+                </tr>
+
+                <tr>
+                    <td>Maven</td>
+                    <td>Build and dependency management</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="flow">
+
+            <h2>Message Flow</h2>
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    Publisher
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    Redis Channel
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    Redis Listener
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    Application
+                </div>
+
+            </div>
+
+            <p>
+                A publisher sends a message to a Redis channel.
+                Redis distributes the message to subscribed listeners.
+            </p>
+
+        </section>
+
+        <section id="structure">
+
+            <h2>Project Structure</h2>
+
+            <pre><code>
+SpringBootRedisListener/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── ...
+│   │   │
+│   │   └── resources/
+│   │       └── application.properties
+│   │
+│   └── test/
+│
+├── compose.yaml
+├── pom.xml
+├── Dockerfile
+└── README.md
+            </code></pre>
+
+        </section>
+
+        <section id="repository">
+
+            <h2>Source Code</h2>
+
+            <p>
+                View the complete source code on GitHub.
+            </p>
+
+            <a class="button primary"
+               href="https://github.com/dinesh-veer/SpringBootRedisListener"
+               target="_blank">
+                Open GitHub Repository
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>SpringBootRedisListener</h3>
+
+            <p>
+                Spring Boot Redis Pub/Sub and Listener example.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <div>
+                <h4>Documentation</h4>
+
+                <a href="index.html">Home</a>
+                <a href="getting-started.html">Getting Started</a>
+                <a href="architecture.html">Architecture</a>
+                <a href="redis-listener.html">Redis Listener</a>
+                <a href="configuration.html">Configuration</a>
+                <a href="docker.html">Docker</a>
+                <a href="examples.html">Examples</a>
+            </div>
+
+            <div>
+                <h4>Community</h4>
+
+                <a href="contributing.html">
+                    Contributing
+                </a>
+
+                <a href="star-support.html">
+                    ⭐ Star Support
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/issues"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Issues
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/pulls"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Pull Requests
+                </a>
+            </div>
+
+            <div>
+                <h4>Project</h4>
+
+                <a href="license.html">
+                    License
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/stargazers"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Stargazers
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Dinesh Veer. All rights reserved.
+        </p>
+
+        <p>
+            Licensed under the
+            <a href="license.html">MIT License</a>.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
