@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Redis Listener | Spring Boot Redis Listener</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        SpringBootRedisListener
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="getting-started.html">
+            Getting Started
+        </a>
+
+        <a href="architecture.html">
+            Architecture
+        </a>
+
+        <a href="redis-listener.html"
+           class="active">
+            Redis Listener
+        </a>
+
+        <a href="configuration.html">
+            Configuration
+        </a>
+
+        <a href="docker.html">
+            Docker
+        </a>
+
+        <a href="examples.html">
+            Examples
+        </a>
+
+    </nav>
+
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h3>Redis Listener</h3>
+
+        <a href="#pubsub">Redis Pub/Sub</a>
+        <a href="#listener">Listener</a>
+        <a href="#container">Listener Container</a>
+        <a href="#processing">Message Processing</a>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Redis Listener</h1>
+
+        <section id="pubsub">
+
+            <h2>Redis Pub/Sub</h2>
+
+            <p>
+                Redis Pub/Sub is a messaging mechanism where publishers
+                send messages to channels and subscribers receive messages
+                from those channels.
+            </p>
+
+            <pre><code>
+Publisher
+    |
+    v
+Redis Channel
+    |
+    +---- Subscriber 1
+    |
+    +---- Subscriber 2
+    |
+    +---- Subscriber 3
+            </code></pre>
+
+        </section>
+
+        <section id="listener">
+
+            <h2>Redis Message Listener</h2>
+
+            <p>
+                Spring Data Redis provides listener infrastructure for
+                receiving messages asynchronously from Redis channels.
+            </p>
+
+            <p>
+                The application registers a listener against the desired
+                Redis channel.
+            </p>
+
+        </section>
+
+        <section id="container">
+
+            <h2>RedisMessageListenerContainer</h2>
+
+            <p>
+                The listener container manages Redis subscriptions and
+                dispatches received messages to the registered listener.
+            </p>
+
+            <pre><code>
+Redis
+  |
+  v
+RedisMessageListenerContainer
+  |
+  v
+Message Listener
+  |
+  v
+Application Handler
+            </code></pre>
+
+        </section>
+
+        <section id="processing">
+
+            <h2>Message Processing</h2>
+
+            <p>
+                When a message is published to the subscribed channel,
+                the listener receives the message and invokes the
+                application's message-handling logic.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>SpringBootRedisListener</h3>
+
+            <p>
+                Spring Boot Redis Pub/Sub and Listener example.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <div>
+                <h4>Documentation</h4>
+
+                <a href="index.html">Home</a>
+                <a href="getting-started.html">Getting Started</a>
+                <a href="architecture.html">Architecture</a>
+                <a href="redis-listener.html">Redis Listener</a>
+                <a href="configuration.html">Configuration</a>
+                <a href="docker.html">Docker</a>
+                <a href="examples.html">Examples</a>
+            </div>
+
+            <div>
+                <h4>Community</h4>
+
+                <a href="contributing.html">
+                    Contributing
+                </a>
+
+                <a href="star-support.html">
+                    ⭐ Star Support
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/issues"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Issues
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/pulls"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Pull Requests
+                </a>
+            </div>
+
+            <div>
+                <h4>Project</h4>
+
+                <a href="license.html">
+                    License
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="https://github.com/dinesh-veer/SpringBootRedisListener/stargazers"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Stargazers
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Dinesh Veer. All rights reserved.
+        </p>
+
+        <p>
+            Licensed under the
+            <a href="license.html">MIT License</a>.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
